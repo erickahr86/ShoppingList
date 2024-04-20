@@ -44,13 +44,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
-//    implementation(libs.kotlin.stdlib)
-//    implementation(libs.symbol.processing.api)
+    // Architectural Components
+    implementation (libs.androidx.lifecycle.viewmodel.ktx.v220)
 
+    // Lifecycle
+    implementation(libs.androidx.lifecycle.extensions)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v220)
 
     // Room
     implementation (libs.androidx.room.runtime )
@@ -66,8 +68,6 @@ dependencies {
     //Dagger - Hilt
     implementation (libs.hilt.android)
     ksp (libs.hilt.android.compiler)
-
-//    implementation(libs.androidx.hilt.lifecycle.viewmodel)
     ksp (libs.androidx.hilt.compiler)
 
     // Coroutines
@@ -88,5 +88,24 @@ dependencies {
 
     // Activity KTX for viewModels()
     implementation (libs.androidx.activity.ktx)
+
+    // Local Unit Tests
+    testImplementation (libs.junit)
+    testImplementation (libs.hamcrest.all)
+    testImplementation (libs.androidx.core.testing)
+    testImplementation (libs.robolectric)
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation (libs.truth)
+    testImplementation (libs.mockito.core)
+
+    // Instrumented Unit Tests
+    androidTestImplementation (libs.junit)
+    androidTestImplementation (libs.kotlinx.coroutines.test)
+    androidTestImplementation (libs.androidx.core.testing)
+    androidTestImplementation (libs.truth)
+    androidTestImplementation (libs.androidx.junit)
+    androidTestImplementation (libs.androidx.espresso.core)
+    androidTestImplementation (libs.mockito.core)
+
 
 }

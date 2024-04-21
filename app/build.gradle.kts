@@ -9,12 +9,17 @@ android {
     namespace = "com.erick.herrera.shoppinglist"
     compileSdk = 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "com.erick.herrera.shoppinglist"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        buildConfigField( "String", "API_KEY", "\"${project.property("API_KEY")}\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

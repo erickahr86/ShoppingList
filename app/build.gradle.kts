@@ -61,6 +61,7 @@ dependencies {
 
     // Room
     implementation (libs.androidx.room.runtime )
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     ksp (libs.androidx.room.compiler)
 
     // Kotlin Extensions and Coroutines support for Room

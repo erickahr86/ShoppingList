@@ -28,7 +28,7 @@ The Shopping List App is a simple Android application that allows users to manag
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/shopping-list-app.git
+   git clone https://github.com/erickahr86/ShoppingList.git
    ```
 
 2. Open the project in Android Studio.
